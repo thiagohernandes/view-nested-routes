@@ -1,0 +1,17 @@
+<div class="container">
+  <table>
+    <tr>
+      <th>Código</th>
+      <th>Nome</th>
+      <th>Ação</th>
+    </tr>
+    <tr *ngFor="let i of servicos">
+      <td>{{i.id}}</td>
+      <td>{{i.nome}}</td>
+      <td><a [routerLink]="['detail',i.id]">Detalhes</a></td>
+    </tr>
+  </table>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
